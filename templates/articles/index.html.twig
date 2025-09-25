@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %} {% block body %}
+<main>
+
+  {% for label, messages in app.flashes %}
+  {% for message in messages %}
+  <div>
+      {{message}}
+  </div>
+  {% endfor %}
+  {% endfor %}
+
+
+  <h1>Liste des articles</h1>
+  
+  <a href={{path('article_new')}}>Ajouter article</a>
+
+{% for article in articles %}
+  <article>|
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+    <span>{{ article.status }}</span>
+    <p>{{ article.createdAt|date("m/d/Y H:i") }}</p>
+    {# <span>{{ article.createdat }}</span> #}
+    <a href="{{ path('article_show', {id: article.id}) }}">Lire</a>
+    <a href="{{ path('article_edit', {id: article.id}) }}">Modifier</a>
+    {% include "articles/delete_form.html.twig" %}
+  </article>
+</main>
+{% endfor %} 
+
+{% endblock %}
