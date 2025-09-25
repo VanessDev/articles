@@ -19,7 +19,7 @@ final class ArticleController extends AbstractController
     #[Route('/', name: 'Articles', methods: 'GET')]
     public function index(ArticleRepository $articlerepo)
     {
-        $articles = $articlerepo->findAll();
+        $articles = $articlerepo->findBy(['createdAt'], ['DESC']);
         //$articles = $articlerepo->findBy (['article' => $article]);
 
         
