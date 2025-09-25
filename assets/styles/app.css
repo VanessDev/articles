@@ -1,6 +1,74 @@
 body {
-    background-color: rgba(135, 207, 235, 0.521);
-    text-align: center;
-   color: blueviolet;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  text-align: center;
 }
 
+.index_twig h1 {
+  font-family: "Montserrat", sans-serif; /* ou ta police */
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Pour compatibilité */
+  color: transparent;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 4px;
+}
+
+.new-article {
+  text-decoration: none;
+  font-style: oblique;
+  font-size: 2rem;
+  font-weight: 300;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 8s ease infinite;
+}
+
+.article {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  background: #fffdf991; /* blanc cassé chaud */
+  color: #333;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: inset 0 4px 20px 7px rgba(0, 0, 0, 0.1);
+  margin: 40px;
+
+}
+
+.index_fields {
+display: flex;
+
+}
+
+.index_links {
+display: flex;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
